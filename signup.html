@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Network</title>
+    <title>Signup - Social Network</title>
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
@@ -22,7 +22,6 @@
         appId: "1:348985127636:web:6382dad7930ff5155dc141",
         //measurementId: "your_measurement_id_here"
       };
-
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
@@ -32,55 +31,27 @@
   </head>
   <body>
     <header>
-      <h1>Social Network</h1>
+      <h1>Signup - Social Network</h1>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Friends</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="index.html">Home</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <h2>Posts</h2>
-        <form>
-          <label for="post-content">Create new post:</label>
-          <textarea id="post-content" name="post-content"></textarea>
-          <button type="submit">Post</button>
-        </form>
-        <ul id="posts-list">
-          <!-- Posts will be added dynamically here -->
-        </ul>
-      </section>
-      <aside>
-        <h2>Friends</h2>
-        <form>
-          <label for="search-friends">Find friends:</label>
-          <input type="text" id="search-friends" name="search-friends" />
-          <button type="submit">Search</button>
-        </form>
-        <ul id="friends-list">
-          <!-- Friends will be added dynamically here -->
-        </ul>
-      </aside>
+      <form id="signup-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+        <button type="submit">Signup</button>
+      </form>
     </main>
     <footer>
       <p>&copy; 2023 Social Network</p>
     </footer>
-    <!-- Login Form -->
-    <div id="login-form-container">
-      <form id="login-form">
-        <h2>Login</h2>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-        <button type="submit">Login</button>
-        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-      </form>
-    </div>
-    <script src="app.js"></script>
+    <script src="signup.js"></script>
   </body>
 </html>
